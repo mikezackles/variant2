@@ -130,7 +130,7 @@ private:
     {
         mp_with_index<mp_size<expected>>( v_.index(), [&]( auto I )
         {
-            if( I == 0 )
+            if constexpr ( I == 0 )
             {
                 throw bad_expected_access<>( "bad_expected_access<>: value present on error request" );
             }
