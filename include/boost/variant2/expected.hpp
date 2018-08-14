@@ -94,12 +94,12 @@ template<class E> void throw_on_unexpected( E const& /*e*/ )
 {
 }
 
-void throw_on_unexpected( std::error_code const & e )
+inline void throw_on_unexpected( std::error_code const & e )
 {
     throw std::system_error( e );
 }
 
-void throw_on_unexpected( std::exception_ptr const & e )
+inline void throw_on_unexpected( std::exception_ptr const & e )
 {
     if( e )
     {
