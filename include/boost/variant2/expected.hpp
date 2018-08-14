@@ -90,7 +90,7 @@ public:
 
 // throw_on_unexpected
 
-template<class E> void throw_on_unexpected( E const& /*e*/ )
+template<class E> inline void throw_on_unexpected( E const& /*e*/ )
 {
 }
 
